@@ -1,0 +1,131 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 juin 2023, 17:30:54
+    Author     : Eddy
+*/
+#AnchorPane{
+    -fx-pref-height:100%;
+    -fx-pref-width:100%;
+}
+
+.panem1{
+    
+    -fx-background-image: url("../Images/1.jpg");
+    -fx-background-size: cover;
+}
+.btnvalider{
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+}
+.btnvalider:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+.colonne{
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.titre{
+    -fx-text-fill: rgb(255,192,0);
+}
+.nav{
+      -fx-background-image: url("../Images/1.jpg");
+    -fx-background-color: linear-gradient(to bottom right,rgb(255,255,255),rgb(255,192,0));
+    
+}
+.nav_btn{
+    -fx-background-color: rgba(0,0,0,0.4);
+    -fx-text-fill: orange;
+    -fx-cursor: hand;
+    -fx-font-size:14px;
+   -fx-border-color:  transparent;
+}
+.nav_btn:hover{
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(to bottom right,rgb(255,255,255),rgba(255,192,0,0.5));
+      -fx-border-radius: 1000px;
+}
+
+.theme{
+    -fx-background-color:  linear-gradient(to bottom ,rgb(255,255,255),rgb(255,192,0));
+}
+.nav_btn_deco:hover{
+    -fx-cursor: hand;   
+}
+.section{
+   -fx-background-color: #fff;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+    -fx-background-radius: 20px;
+}
+.btn-primary {
+  -fx-text-fill: #fff;
+  -fx-background-color: #0d6efd;
+  -fx-border-color: #0d6efd;
+}
+.btn-primary:hover{
+  -fx-text-fill: #fff;
+   -fx-background-color: #0b5ed7;
+  -fx-border-color: #0a58ca;
+}
+
+.btn-success{
+    -fx-background-color: #198754;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+.tableau{
+    -fx-background-image: url("../Images/2.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.btn-danger{
+    -fx-background-color: #dc3545;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+}
+.image{
+    -fx-border-radius: 10px;
+}
+.table-view{
+   
+}
+.table-view .column-header-background{
+    -fx-background-color:  linear-gradient(to bottom ,rgb(255,255,255),rgb(255,192,0));
+    -fx-background-radius: 7px 7px 0px 0px;
+ 
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-size:25px;
+    
+}
+
+.table-row-cell :hover{
+    -fx-background-color: rgb(255,192,0.4);
+    -fx-cursor: hand;
+    
+    
+}
+.table-row-cell :odd{
+    -fx-background-color: rgb(255,192,0,0.2);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    
+    
+}
+.table-row-cell :even{
+    -fx-background-color: rgba(255,192,0,0.5);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+    
+    
+}

@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.image{
+    -fx-shape: "circle";
+     -fx-background-radius: 50%;
+    -fx-background-color: transparent;
+    -fx-border-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-border-color: #ffffff;
+}

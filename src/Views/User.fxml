@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserController">
+     <AnchorPane fx:id="form_utilisateur" layoutX="-12.0" prefHeight="789.0" prefWidth="1299.0" stylesheets="@../Assets/Styles/style.css" AnchorPane.bottomAnchor="-184.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-275.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="34.0" layoutY="18.0" prefHeight="679.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom ,rgb(255,255,255),rgb(255,192,0));" styleClass="section">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="125.0" layoutY="47.0" prefHeight="43.0" prefWidth="350.0" text="Parametre utiisateur" textAlignment="CENTER">
+                  <font>
+                     <Font size="29.0" />
+                  </font>
+               </Label>
+                                    <TextField fx:id="T_nom" alignment="CENTER" layoutX="171.0" layoutY="161.0" prefHeight="30.0" prefWidth="262.0" promptText="Nom utilisateur" />
+                                    <PasswordField fx:id="T_pass" alignment="CENTER" layoutX="171.0" layoutY="226.0" prefHeight="30.0" prefWidth="261.0" promptText="Mots de passe" />
+                                    <ComboBox fx:id="ComboRole" layoutX="171.0" layoutY="282.0" onAction="#Role" prefHeight="30.0" prefWidth="263.0" promptText="Rôle" />
+                                    <Button fx:id="btn_adm_ajout" layoutX="156.0" layoutY="425.0" mnemonicParsing="false" onAction="#adduser" prefHeight="36.0" prefWidth="288.0" styleClass="btn-success" text="Ajouter" />
+                                    <Button fx:id="btn_modif" layoutX="156.0" layoutY="473.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="288.0" styleClass="btn-primary" text="Modifier" />
+                                    <Button fx:id="btn_supr" layoutX="156.0" layoutY="528.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="288.0" styleClass="btn-danger" text="Supprimer" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="645.0" layoutY="16.0" prefHeight="679.0" prefWidth="503.0" style="-fx-background-color: linear-gradient(to bottom ,rgb(255,255,255),rgb(255,192,0));" styleClass="section" stylesheets="@../Assets/Styles/style.css" />
+                              <TableView fx:id="Tableuser" layoutX="658.0" layoutY="27.0" onMouseClicked="#select" prefHeight="658.0" prefWidth="482.0">
+                                <columns>
+                                  <TableColumn fx:id="col_log" prefWidth="239.0" styleClass="colonne" text="login" />
+                                  <TableColumn fx:id="col_Role" prefWidth="238.0" styleClass="colonne" text="Admin" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+
+
+</AnchorPane>

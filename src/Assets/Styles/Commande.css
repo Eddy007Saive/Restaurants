@@ -1,0 +1,39 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 13 juil. 2023, 11:11:30
+    Author     : MEGATRON
+*/
+
+.textfield{
+    -fx-background-radius: 100;
+    
+}
+
+.btn_recherche{
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(to bottom right,rgb(255,255,255),rgb(255,192,0));
+}
+
+.btn_recherche:hover{
+    -fx-cursor: hand;
+}
+
+.produit{
+    -fx-background-radius: 30px;
+    
+}
+
+.btn_commander{
+    -fx-background-radius: 100;
+    
+}
+.fruit_item{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 30
+}
+.shadow{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.1),10.0,0.0,0.0,10.0);
+}

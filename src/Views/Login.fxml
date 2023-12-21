@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="614.0" stylesheets="@../Assets/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AuthController">
+   <children>
+      <AnchorPane layoutX="283.0" layoutY="-2.0" prefHeight="430.0" prefWidth="332.0">
+         <children>
+            <Label alignment="CENTER" layoutX="71.0" layoutY="65.0" prefHeight="57.0" prefWidth="212.0" text="Se connecter" textAlignment="CENTER" textFill="#170e01">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="BClose" fill="#141414" glyphName="CLOSE" layoutX="309.0" layoutY="21.0" onMouseClicked="#close" size="24" />
+            <TextField fx:id="Tuser" alignment="CENTER" layoutX="37.0" layoutY="185.0" prefHeight="30.0" prefWidth="285.0" promptText="Utilisateur" text="Admin">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Hyperlink layoutX="37.0" layoutY="278.0" prefHeight="23.0" prefWidth="140.0" text="Mots de passe oublié ?" />
+            <PasswordField fx:id="TMdp" alignment="CENTER" layoutX="34.0" layoutY="239.0" prefHeight="25.0" prefWidth="285.0" promptText="Mot de passe" text="admin" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btn_connexion" alignment="CENTER" layoutX="391.0" layoutY="315.0" mnemonicParsing="false" onAction="#valider" prefHeight="30.0" prefWidth="131.0" styleClass="btnvalider" text="Connexion">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+      <AnchorPane prefHeight="428.0" prefWidth="305.0" styleClass="panem1">
+         <children>
+            <Label alignment="CENTER" layoutX="24.0" layoutY="164.0" prefHeight="63.0" prefWidth="212.0" text="Bienvenue" textAlignment="CENTER" textFill="#fcf5f5">
+               <font>
+                  <Font name="System Italic" size="31.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.24" fraction="0.53" topOpacity="0.91" />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

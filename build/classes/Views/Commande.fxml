@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="form_commande" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CommandeController">
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="5.0" prefHeight="702.0" prefWidth="357.0" styleClass="section">
+         <children>
+            <TextField fx:id="recherche_p" layoutX="6.0" layoutY="82.0" prefHeight="44.0" prefWidth="343.0" promptText="Rechercher" styleClass="textfield" />
+            <Button fx:id="btn_recherche1" layoutX="259.0" layoutY="85.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="87.0" text="Rechercher">
+               <styleClass>
+                  <String fx:value="btn_recherche" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="4.0" prefHeight="75.0" prefWidth="339.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="186.0" text="Commande">
+                     <font>
+                        <Font name="Cambria Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" layoutX="20.0" layoutY="166.0" prefHeight="388.0" prefWidth="310.0" style="-fx-background-color: linear-gradient(to bottom right,rgb(255,255,255),rgb(255,192,0));">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="355.0">
+                     <children>
+                        <Label fx:id="NomP_choisis" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="182.0" text="Name">
+                           <font>
+                              <Font name="Cambria Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="PrixP_choisis" prefHeight="37.0" prefWidth="92.0" text="Prix">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="38.0" prefWidth="138.0" text="Ariary" />
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="ImageP_choisis" fitHeight="162.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="76.0" prefWidth="310.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="112.0" text="Quantité">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="qt_choisis" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="produit" />
+                  <String fx:value="section" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </VBox>
+            <Button fx:id="btn_ajouterP" alignment="CENTER_RIGHT" layoutX="100.0" layoutY="497.0" mnemonicParsing="false" onAction="#commander" prefHeight="38.0" prefWidth="157.0" text="Ajouter au panier" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn_commander" />
+                  <String fx:value="btn-success" />
+               </styleClass>
+            </Button>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" layoutX="122.0" layoutY="524.0" size="20" />
+            <Button fx:id="btn_actu" layoutX="101.0" layoutY="576.0" mnemonicParsing="false" onAction="#actualiser" prefHeight="38.0" prefWidth="129.0" text="Actualiser" />
+            <TextField fx:id="id" layoutX="101.0" layoutY="133.0" />
+         </children>
+         <stylesheets>
+            <URL value="@../Assets/Styles/style.css" />
+            <URL value="@../Assets/Styles/Commande.css" />
+         </stylesheets>
+      </AnchorPane>
+      <AnchorPane layoutX="371.0" layoutY="1.0" prefHeight="702.0" prefWidth="732.0" styleClass="section">
+         <children>
+            <ScrollPane fx:id="menu_scroll1" layoutX="11.0" layoutY="25.0" prefHeight="409.0" prefWidth="711.0" styleClass="section" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+               <content>
+                  <GridPane fx:id="menu_grid" prefHeight="50.0" prefWidth="104.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" top="5.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <TableView fx:id="table_com" layoutX="6.0" layoutY="443.0" prefHeight="245.0" prefWidth="716.0" styleClass="c">
+               <columns>
+                  <TableColumn fx:id="col_IdCom" prefWidth="133.0" styleClass="colonne" text="Commande N" />
+                  <TableColumn fx:id="col_plat" prefWidth="127.0" styleClass="colonne" text="Menu commandé" />
+                  <TableColumn fx:id="col_qt" prefWidth="127.0" styleClass="colonne" text="Quantité" />
+                  <TableColumn fx:id="col_prix" prefWidth="127.0" styleClass="colonne" text="prix" />
+                  <TableColumn fx:id="col_mont" prefWidth="201.0" styleClass="colonne" text="Montant" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../Assets/Styles/style.css" />
+      <URL value="@../Assets/Styles/Commande.css" />
+      <URL value="@../Assets/Styles/menu.css" />
+   </stylesheets>
+</AnchorPane>
